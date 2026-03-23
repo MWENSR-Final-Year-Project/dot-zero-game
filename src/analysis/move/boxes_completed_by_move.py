@@ -1,5 +1,4 @@
-from game.move import Move
-from game.state import GameState
+from game import GameState, Move
 
 
 def boxes_completed_by(state: GameState, move: Move) -> int:

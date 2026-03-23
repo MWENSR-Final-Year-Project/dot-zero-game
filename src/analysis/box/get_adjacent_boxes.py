@@ -1,5 +1,4 @@
-from game.board import Board
-from game.move import Move
+from game import Board, Move
 
 
 def get_adjacent_boxes(board: Board, move: Move):

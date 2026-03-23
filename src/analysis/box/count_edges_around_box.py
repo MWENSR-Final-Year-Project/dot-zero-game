@@ -1,5 +1,4 @@
-from game.board import Board
-from game.move import Move
+from game import Board, Move
 
 
 def count_edges_around_box(board: Board, r: int, c: int) -> int:

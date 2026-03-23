@@ -1,6 +1,5 @@
-from game.analysis.box import get_adjacent_boxes, count_edges_around_box
-from game.move import Move
-from game.state import GameState
+from analysis.box import get_adjacent_boxes, count_edges_around_box
+from game import GameState, Move
 
 
 def creates_third_edge(state: GameState, move: Move) -> bool:

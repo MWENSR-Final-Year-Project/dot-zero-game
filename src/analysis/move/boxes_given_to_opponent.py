@@ -1,6 +1,5 @@
-from game.analysis.move import boxes_completed_by
-from game.move import Move
-from game.state import GameState
+from analysis.move import boxes_completed_by
+from game import GameState, Move
 
 
 def boxes_given_to_opponent(state: GameState, move: Move) -> int:
