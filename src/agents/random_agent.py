@@ -1,0 +1,19 @@
+import numpy as np
+from agents.base_agent import Agent
+from game.move import Move
+from game.state import GameState
+
+
+class RandomAgent(Agent):
+    def __init__(self):
+        super().__init__("Random")
+
+    def select_move(self, state: GameState) -> Move:
+        legal_moves = state.get_legal_moves()
+
+        if not legal_moves:
+            raise ValueError(
+                "RandomAgent cannot select a move: No legal moves available"
+            )
+
+        return np.random.choice(legal_moves)
