@@ -1,7 +1,6 @@
 import numpy as np
 import pytest
-from game.board import Board
-from game.move import Move
+from game import Board, Move
 
 
 def test_box_completed_true():

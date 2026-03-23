@@ -1,5 +1,5 @@
 import numpy as np
-from game.board import Board
+from game import Board
 
 
 def test_horizontal_edge_init():

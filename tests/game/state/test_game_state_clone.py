@@ -1,5 +1,4 @@
-from game.board import Board
-from game.state import GameState
+from game import Board, GameState
 
 
 def test_clone_returns_new_instance():

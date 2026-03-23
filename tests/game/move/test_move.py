@@ -1,7 +1,7 @@
 from dataclasses import FrozenInstanceError
 import pytest
 from pydantic import ValidationError
-from game.move import Move
+from game import Move
 
 def test_move_creation_valid():
     m = Move('H', 1, 2)

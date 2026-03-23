@@ -1,6 +1,4 @@
-from game.board import Board
-from game.move import Move
-from game.state import GameState
+from game import Board, GameState,  Move
 
 
 def test_initial_board_has_all_edges_legal():

@@ -1,7 +1,4 @@
-from game.board import Board
-from game.move import Move
-from game.state import GameState
-
+from game import Board, GameState, Move
 
 def test_apply_move_returns_new_state():
     state = GameState(Board(size=3))

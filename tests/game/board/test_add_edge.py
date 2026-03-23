@@ -1,6 +1,5 @@
 import pytest
-from game.board import Board
-from game.move import Move
+from game import Board, Move
 
 
 def test_add_horizontal_edge():

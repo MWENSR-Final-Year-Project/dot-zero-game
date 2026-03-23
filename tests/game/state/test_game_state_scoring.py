@@ -1,7 +1,4 @@
-from game.board import Board
-from game.move import Move
-from game.state import GameState
-
+from game import Board, GameState, Move
 
 def _state_with_three_sides(col=0):
     state = GameState(Board(size=3))

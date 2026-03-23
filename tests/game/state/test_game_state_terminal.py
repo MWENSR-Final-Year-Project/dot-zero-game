@@ -1,6 +1,5 @@
 import pytest
-from game.board import Board
-from game.state import GameState
+from game import Board, GameState
 
 
 @pytest.mark.parametrize("legal_moves, expected", [
