@@ -1,8 +1,7 @@
 import numpy as np
 from agents.base_agent import Agent
-from game.analysis.move import creates_third_edge, boxes_completed_by
-from game.move import Move
-from game.state import GameState
+from analysis.move import creates_third_edge, boxes_completed_by
+from game import GameState, Move
 
 
 class DefensiveAgent(Agent):

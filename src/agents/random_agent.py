@@ -1,7 +1,6 @@
 import numpy as np
 from agents.base_agent import Agent
-from game.move import Move
-from game.state import GameState
+from game import GameState, Move
 
 
 class RandomAgent(Agent):

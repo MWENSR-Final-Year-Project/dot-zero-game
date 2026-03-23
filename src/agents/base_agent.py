@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
-from game.state import GameState
-from game.move import Move
+from game import GameState, Move
 
 
 class Agent(ABC):

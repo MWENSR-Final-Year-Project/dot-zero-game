@@ -1,15 +1,14 @@
 import numpy as np
 from agents.base_agent import Agent
-from game.analysis.move import (
+from analysis.move import (
     boxes_completed_by,
     boxes_given_to_opponent,
     creates_third_edge,
 )
-from game.move import Move
-from game.state import GameState
+from game import GameState, Move
 
 
-class HueristicAgent(Agent):
+class HeuristicAgent(Agent):
     def __init__(self):
         super().__init__("Heuristic")
 
@@ -18,7 +17,7 @@ class HueristicAgent(Agent):
 
         if not legal_moves:
             raise ValueError(
-                "HueristicAgent cannot select a move: No legal moves available"
+                "HeuristicAgent cannot select a move: No legal moves available"
             )
 
         move_scores = {move: boxes_completed_by(state, move) for move in legal_moves}

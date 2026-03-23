@@ -1,8 +1,7 @@
 import numpy as np
 from agents.base_agent import Agent
-from game.analysis.move.boxes_completed_by_move import boxes_completed_by
-from game.move import Move
-from game.state import GameState
+from analysis.move.boxes_completed_by_move import boxes_completed_by
+from game import GameState, Move
 
 
 class GreedyAgent(Agent):
