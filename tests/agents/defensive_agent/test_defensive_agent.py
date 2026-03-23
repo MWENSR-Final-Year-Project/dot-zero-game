@@ -1,6 +1,7 @@
 import pytest
 from agents.defensive_agent import DefensiveAgent
 from analysis.move import opens_chain, scoring_move_exposes_chain
+from analysis.move import boxes_completed_by
 from game.board import Board
 from game.move import Move
 from game.state import GameState
@@ -26,7 +27,6 @@ def test_raises_when_no_legal_moves():
 def test_takes_safe_scoring_move():
     state = GameState(_three_sided_board())
     move = DefensiveAgent().select_move(state)
-    from analysis.move import boxes_completed_by
     assert boxes_completed_by(state, move) > 0
 
 

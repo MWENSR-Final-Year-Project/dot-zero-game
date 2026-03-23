@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from typing import List, Tuple
-import numpy as np
 from analysis.move import boxes_completed_by, creates_third_edge
 from game import GameState, Move
 

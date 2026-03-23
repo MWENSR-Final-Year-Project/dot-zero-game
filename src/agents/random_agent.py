@@ -1,6 +1,4 @@
-from abc import ABC
 from typing import List
-
 import numpy as np
 from agents.base_agent import Agent
 from game import GameState, Move

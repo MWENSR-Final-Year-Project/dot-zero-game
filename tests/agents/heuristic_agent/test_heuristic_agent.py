@@ -71,5 +71,4 @@ def test_fallback_uses_safe_moves_when_available():
         mock_acc.side_effect = lambda _, m: 3 if m == m1 else 1
         chosen = HeuristicAgent().select_move(state)
 
-    # m1 is safe and has lower accessible boxes, so it should be chosen
     assert chosen == m1

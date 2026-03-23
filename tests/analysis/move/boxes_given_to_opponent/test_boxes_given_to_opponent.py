@@ -1,6 +1,6 @@
+import pytest
 from analysis.move import boxes_given_to_opponent
 from game import Board, GameState, Move
-import pytest
 
 
 @pytest.mark.parametrize(

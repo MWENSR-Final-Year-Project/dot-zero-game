@@ -1,6 +1,5 @@
-import numpy as np
 from agents.base_agent import Agent
-from analysis.move import boxes_given_to_opponent, opponent_accessible_boxes
+from analysis.move import opponent_accessible_boxes
 from game import GameState, Move
 
 class HeuristicAgent(Agent):

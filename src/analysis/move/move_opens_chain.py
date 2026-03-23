@@ -1,5 +1,4 @@
 from game import GameState, Move
-from analysis.move.move_creates_third_edge import creates_third_edge
 
 
 def opens_chain(state: GameState, move: Move) -> bool:

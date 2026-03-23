@@ -1,6 +1,6 @@
+import pytest
 from analysis.box import get_adjacent_boxes
 from game import Board, Move
-import pytest
 
 
 @pytest.mark.parametrize(
