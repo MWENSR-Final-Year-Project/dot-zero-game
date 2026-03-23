@@ -1,9 +1,13 @@
+from abc import ABC
+from typing import List
+
 import numpy as np
 from agents.base_agent import Agent
 from game import GameState, Move
 
 
 class RandomAgent(Agent):
+
     def __init__(self):
         super().__init__("Random")
 
@@ -16,3 +20,6 @@ class RandomAgent(Agent):
             )
 
         return np.random.choice(legal_moves)
+
+    def _fallback(self, state: GameState, legal_moves: List[Move], safe_moves: List[Move]) -> Move:
+        pass

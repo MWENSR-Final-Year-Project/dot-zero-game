@@ -54,6 +54,8 @@ class GameState:
     def get_winner(self) -> int:
         if self.scores[1] > self.scores[-1]:
             return 1
-        elif self.scores[-1] > self.scores[1]:
+
+        if self.scores[-1] > self.scores[1]:
             return -1
+
         return 0

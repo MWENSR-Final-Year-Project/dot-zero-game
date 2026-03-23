@@ -1,3 +1,5 @@
+from typing import List
+
 import numpy as np
 from agents.base_agent import Agent
 from analysis.move.boxes_completed_by_move import boxes_completed_by
@@ -5,6 +7,7 @@ from game import GameState, Move
 
 
 class GreedyAgent(Agent):
+
     def __init__(self):
         super().__init__("Greedy")
 
@@ -22,3 +25,6 @@ class GreedyAgent(Agent):
             return best_move
 
         return np.random.choice(legal_moves)
+
+    def _fallback(self, state: GameState, legal_moves: List[Move], safe_moves: List[Move]) -> Move:
+        pass

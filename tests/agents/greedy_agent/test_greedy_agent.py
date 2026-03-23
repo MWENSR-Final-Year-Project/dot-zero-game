@@ -1,5 +1,4 @@
 import pytest
-
 from agents import GreedyAgent
 from analysis.move import boxes_completed_by
 from game import Board, GameState
@@ -16,7 +15,6 @@ def _three_sided_board():
 def test_returns_legal_move():
     state = GameState(Board(size=2))
     move = GreedyAgent().select_move(state)
-
     assert move in state.get_legal_moves()
 
 
@@ -32,9 +30,7 @@ def test_raises_when_no_legal_moves():
 def test_picks_box_completing_move():
     state = GameState(_three_sided_board())
     current_player = state.current_player
-
     new_state = state.apply_move(GreedyAgent().select_move(state))
-
     assert new_state.scores[current_player] > state.scores[current_player]
 
 
@@ -53,13 +49,10 @@ def test_picks_move_completing_most_boxes():
     legal_moves = state.get_legal_moves()
     max_score = max(boxes_completed_by(state, m) for m in legal_moves)
 
-    chosen = GreedyAgent().select_move(state)
-
-    assert boxes_completed_by(state, chosen) == max_score
+    assert boxes_completed_by(state, GreedyAgent().select_move(state)) == max_score
 
 
-def test_falls_back_when_no_scoring_moves():
+def test_falls_back_to_random_when_no_scoring_moves():
     state = GameState(Board(size=2))
     move = GreedyAgent().select_move(state)
-
     assert move in state.get_legal_moves()

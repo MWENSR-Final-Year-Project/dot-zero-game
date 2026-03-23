@@ -1,4 +1,4 @@
-from analysis.move import boxes_completed_by
+from analysis.move.boxes_completed_by_move import boxes_completed_by
 from game import GameState, Move
 
 

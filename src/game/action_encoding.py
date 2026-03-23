@@ -7,11 +7,12 @@ from game.state import GameState
 def move_to_index(move: Move, n: int) -> int:
     if move.orientation == "H":
         return move.row * n + move.col
-    elif move.orientation == "V":
+
+    if move.orientation == "V":
         offset = (n + 1) * n
         return offset + move.row * (n + 1) + move.col
-    else:
-        raise ValueError(f"Invalid move orientation: {move.orientation}")
+
+    raise ValueError(f"Invalid move orientation: {move.orientation}")
 
 
 def index_to_move(index: int, n: int) -> Move:
@@ -21,11 +22,11 @@ def index_to_move(index: int, n: int) -> Move:
         row = index // n
         col = index % n
         return Move("H", row, col)
-    else:
-        index -= horizontal_count
-        row = index // (n + 1)
-        col = index % (n + 1)
-        return Move("V", row, col)
+
+    index -= horizontal_count
+    row = index // (n + 1)
+    col = index % (n + 1)
+    return Move("V", row, col)
 
 
 def legal_moves_mask(state: GameState) -> np.ndarray:
