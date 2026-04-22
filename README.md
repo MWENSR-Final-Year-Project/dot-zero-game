@@ -58,11 +58,12 @@ All agents except `GreedyAgent` inherit from the abstract `Agent` base class, wh
 
 ## Installation
 
+Requires Python 3.12+.
+
 ```bash
-python -m venv venv
+python3.12 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
-pip install -e .
+pip install -e ".[dev]"
 ```
 
 ## Running Tests
@@ -81,6 +82,20 @@ pytest --cov=src
 
 ```bash
 pylint src/
+```
+
+## Docker
+
+The image is published to the GitHub Container Registry on every push to `main`.
+
+```bash
+docker pull ghcr.io/mwensr-final-year-project/dot-zero-game:latest
+```
+
+To build locally:
+
+```bash
+docker build -t dot-zero-game .
 ```
 
 ## Dependencies
