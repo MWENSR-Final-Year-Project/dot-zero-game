@@ -6,7 +6,7 @@ from game import GameState, Move
 
 class DefensiveAgent(Agent):
     def __init__(self):
-        super().__init__("Defensive")
+        super().__init__("defensive")
 
     def select_move(self, state: GameState) -> Move:
         legal_moves = self._require_legal_moves(state)

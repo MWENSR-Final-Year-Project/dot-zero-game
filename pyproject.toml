@@ -1,10 +1,13 @@
 [project]
 name = "dot-zero-game"
 version = "0.1.0"
+description = "Dots and Boxes game engine, agents, PUCT search, and state encoding for the Dot Zero RL research platform"
 requires-python = ">=3.12"
+
 dependencies = [
     "numpy==2.4.3",
     "pydantic==2.12.5",
+    "torch>=2.0",
 ]
 
 [project.optional-dependencies]
@@ -18,3 +21,15 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 70

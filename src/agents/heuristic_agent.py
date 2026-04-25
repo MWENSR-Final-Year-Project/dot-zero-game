@@ -4,7 +4,7 @@ from game import GameState, Move
 
 class HeuristicAgent(Agent):
     def __init__(self):
-        super().__init__("Heuristic")
+        super().__init__("heuristic")
 
     def _fallback(self, state: GameState, legal_moves, safe_moves) -> Move:
         candidates = safe_moves if safe_moves else legal_moves

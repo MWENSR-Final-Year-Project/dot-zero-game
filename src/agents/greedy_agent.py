@@ -9,7 +9,7 @@ from game import GameState, Move
 class GreedyAgent(Agent):
 
     def __init__(self):
-        super().__init__("Greedy")
+        super().__init__("greedy")
 
     def select_move(self, state: GameState) -> Move:
         legal_moves = state.get_legal_moves()

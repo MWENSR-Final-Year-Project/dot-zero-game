@@ -7,7 +7,7 @@ from game import GameState, Move
 class RandomAgent(Agent):
 
     def __init__(self):
-        super().__init__("Random")
+        super().__init__("random")
 
     def select_move(self, state: GameState) -> Move:
         legal_moves = state.get_legal_moves()
