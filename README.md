@@ -75,12 +75,6 @@ source venv/bin/activate
 pip install -e ".[dev]"
 ```
 
-To use `NGMCTSAgent`, also install the `neural` optional extra (requires PyTorch):
-
-```bash
-pip install -e ".[dev,neural]"
-```
-
 ## Running Tests
 
 ```bash
@@ -117,6 +111,6 @@ docker build -t dot-zero-game .
 
 - `numpy` — board representation, encoding, and random move selection
 - `pydantic` — validated, frozen `Move` dataclass
-- `torch` *(optional, `[neural]`)* — required only for `NGMCTSAgent` inference
+- `torch` — required for `NGMCTSAgent` inference
 - `pytest` / `pytest-cov` — testing and coverage
 - `pylint` — static analysis
